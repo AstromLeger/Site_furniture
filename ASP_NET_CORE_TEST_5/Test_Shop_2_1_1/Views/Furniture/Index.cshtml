@@ -1,0 +1,57 @@
+﻿
+@using Test_Shop_2_1.ViewModels
+@model FurnituresListViewModel
+
+<h1>Все товары</h1>
+<h3>@Model.currCategory</h3>
+@{
+    foreach(var furniture in Model.AllFurnitures)
+    {
+        <div>
+            <h2>Модель: @furniture.name</h2>
+            <p>Цена: @furniture.price.ToString("c")</p>
+        </div>
+    }
+
+}
+
+<div class="row mt-5 mb-2">
+
+
+
+        <div class="Pologenie">
+            <div class="Spisok_Menu Inviz">
+
+            <div class="Spisok">
+                <ul>
+                    <li><a href="AllFurniturs">Вся мебель</a></li>
+                </ul>
+            </div>
+                <div class="Spisok_Man">
+                    <h4>Диваны</h4>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Furniture" asp-action="Index">Список товаров</a></li>
+                        <li><a href="Armada">Армада</a></li>
+                        <li><a href="Aurora">Аврора</a></li>
+                        <li><a href="Caminnoe">Каминное</a></li>
+                        <li><a href="Bali">Бали</a></li>
+                        <li><a href="Bruclin">Бруклин</a></li>
+                        <li><a href="Veneciay">Венеция</a></li>
+                        <li><a href="Loft">Лофт</a></li>
+                        <li><a href="Graciay">Грация</a></li>
+                        <li><a href="Valeriay">Валерия</a></li>
+                        <li><a href="Lotos">Лотос</a></li>
+                        <li><a href="Raduga">Радуга</a></li>
+                        <li><a href="Sorento">Соренто</a></li>
+                    </ul>
+                </div>
+                <div class="Spisok_Woman">
+                    <h4>Кресла</h4>
+                    <ul>
+                        <li><a href="">Аврора</a></li>
+                        <li><a href="#">Каминное</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
